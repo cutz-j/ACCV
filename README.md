@@ -29,3 +29,22 @@ cd ..
 ```
 pip install -r requirements.txt
 ```
+
+## EfficientNet PyTorch
+We utilize timm repository.
+https://github.com/rwightman/pytorch-image-models/tree/master/timm
+
+'''
+git clone https://github.com/rwightman/pytorch-image-models
+pip install timm
+cd pytorch-image-models
+cp -r timm/ your-work-dir
+'''
+
+## Contrastive Representation Distillation loss
+We utilize the repository of CRD paper author [1].
+https://github.com/HobbitLong/RepDistiller
+
+
+## Reference
+[1] Tian, Yonglong, Dilip Krishnan, and Phillip Isola. "Contrastive representation distillation." arXiv preprint arXiv:1910.10699 (2019).
