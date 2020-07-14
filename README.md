@@ -34,7 +34,7 @@ pip install -r requirements.txt
 We utilize timm repository.
 https://github.com/rwightman/pytorch-image-models/tree/master/timm
 
-'''
+```
 git clone https://github.com/rwightman/pytorch-image-models
 pip install timm
 cd pytorch-image-models
