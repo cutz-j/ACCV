@@ -39,7 +39,7 @@ git clone https://github.com/rwightman/pytorch-image-models
 pip install timm
 cd pytorch-image-models
 cp -r timm/ your-work-dir
-'''
+```
 
 ## Contrastive Representation Distillation loss
 We utilize the repository of CRD paper author [1].
