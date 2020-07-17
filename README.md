@@ -46,5 +46,7 @@ We utilize the repository of CRD paper author [1].
 https://github.com/HobbitLong/RepDistiller
 
 
+## Demo (Evaluation)
+
 ## Reference
 [1] Tian, Yonglong, Dilip Krishnan, and Phillip Isola. "Contrastive representation distillation." arXiv preprint arXiv:1910.10699 (2019).
