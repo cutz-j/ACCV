@@ -46,5 +46,13 @@ We utilize the repository of CRD paper author [1].
 https://github.com/HobbitLong/RepDistiller
 
 
+## Demo (Evaluation)
+```
+# Dataset and model weights need to be download.
+# If you want to change config, check /config/test.yaml
+python demo.py --dataset dataset dir \
+                --pt_weight pt_weight_dir \
+```
+
 ## Reference
 [1] Tian, Yonglong, Dilip Krishnan, and Phillip Isola. "Contrastive representation distillation." arXiv preprint arXiv:1910.10699 (2019).
