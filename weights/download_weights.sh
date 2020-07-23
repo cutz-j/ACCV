@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# wget -O weights.zip --no-check-certificate https://skku0-my.sharepoint.com/:u:/g/personal/byo7000_skku_edu/ESF_WuwUau5Mrl3hdteSChcBX3mBt8SP1Ajq-CmkEN7MlQ?download=1
+wget -O weight.zip --no-check-certificate https://gskku-my.sharepoint.com/:u:/g/personal/cutz_g_skku_edu/EXOVpQ3O-E5BkEYpg_ayWUABf8Ls_MhpybsJgk2Qyv8SPQ?download=1
 
-# unzip weights.zip
+unzip weight.zip
 
-# rm weights.zip
+rm weight.zip
