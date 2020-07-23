@@ -16,7 +16,7 @@ http://image-net.org/download
 We use torchvision built-in CIFAR-10.
 
 ## Download pre-trained model weights
-The pretrained weights can be downloaded by running the file in dataset or [here]().
+The pretrained weights can be downloaded by running the file in dataset.
 
 ```
 # Download the pre-trained weights
