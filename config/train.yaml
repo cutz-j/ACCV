@@ -1,0 +1,198 @@
+#### dataset/Model parameters ####
+# path to dataset
+data_dir: /home/data/imagenet
+# model architecture
+model: tf_efficientnet_b1
+# start with pretrained
+pretrained: False
+# initialize model
+initial_checkpoint:
+# resume
+resume:
+# resume optim
+no_resume_opt: False
+# num_classes
+num_classes: 1000
+# global pool (avg, max avgmax, avgmaxc)
+gp: avg
+# batch_size
+batch_size: 180
+#  valid batch size
+valid_batch_size: 256
+# img_size
+img_size: 240
+# input image center crop pct
+crop_pct: 0.882
+# override mean pixel & std pixel value
+mean: null
+std: null
+# interpolation (bicubic, bilinear)
+interpolation: bicubic
+# path to class to idx mapping file
+class_map: ''
+# disalbe test time pool
+no_test_pool: True
+# tensorflow preprocessing pipeline (CPU TF)
+tf_preprocessing: False
+# ema version of wiehgts
+use_ema: True
+# convert model torchscript for inference
+torchscript: True
+# output csv file
+results_file: ''
+
+#### Augmentation parameters ####
+# drop out rate
+drop: 0.2
+# dropconnect rate
+drop_connect: 0.2
+# drop block rate
+drop_block: null
+# Jensen-shannon dirvergnece + CE loss
+jsd: False
+# color jitter factor
+color_jitter: 0.2
+# autoaugment policy
+aa: v0
+# number of aug splits
+aug_splits: null
+# random erase prob
+reprob: 0.1
+# random erase mode
+remode: const
+# random erase count
+recount: 1
+# not random erase first
+resplit: True
+# mixup alpha, mixup enabled
+mixup: null
+# turn off mixup after this epoch
+mixup_off_epoch: 0
+# label smoothing
+smoothing: 0.1
+# training interpolation
+train_interpolation: bicubic
+
+#### Optimizer parameters ####
+# optimizer
+opt: sgd
+# optimizer epsilon
+opt_eps: 0.00000001
+# SGD momentum
+momentum: 0.9
+# wiehgt decay
+weight_decay: 0
+
+#### LR parameters ####
+# LR scheduler
+sched: step
+# LR
+lr: 0.003
+# lr noise
+lr_noise: null
+# lr noise limit percent
+lr_noise_pct: 0.67
+# lr noise std-dev
+lr_noise_std: 1.0
+# lr cycle multiplier
+lr_cycle_mul: 1.0
+# lr cycle limit
+lr_cycle_limit: 1
+# warmup learning rate
+warmup_lr: 0.005
+warmup_epochs: 0
+# lower lr bound for cycle
+min_lr: 0.00001
+# epochs
+epochs: 200
+# manual epoch number
+start_epoch: 0
+# epoch interval to decay lr
+decay_epochs: 2.4
+# epochs to cooldown lr
+cooldown_epochs: 10
+# patience epochs for Plateau LR
+patience_epochs: 10
+# lr decay rate
+decay_rate: 0.97
+
+#### BN parameters ####
+# use tf bn defaults
+bn_tf: False
+# BN momentum override
+bn_momentum: null
+# BN epsilon override
+bn_eps: null
+# enable NVIDIA Apex or Torch synchoronized BN
+sync_bn: False
+# Distribute BN stats between nodes after each epoch
+dist_bn: ''
+# enable separate BN layers per augmentation split
+split_bn: False
+
+#### Model exponential Moving Average parameters ####
+# enable tracking moving average of model weights
+model_ema: False
+# force ema to be tracked on cpu
+model_ema_force_cpu: False
+# decay factor for model weights moving average
+model_ema_decay: 0.9998
+
+#### Misc parameters ####
+# randoom seed
+seed: 42
+# batches to wait before logging
+log_interval: 50
+# batches to wait before wrting recovery checkpoint
+recovery_interval: 0
+# training processes to use
+j: 4
+# save images of input batches every log interval
+save_images: False
+# use NVIDIA amp for mixed precision training
+amp: False
+# pin cpu memory
+pin_mem: True
+# batch logging frequency
+log_freq: 10
+# path to checkpoint
+checkpoint: ''
+# number of GPU
+num_gpu: 3
+# number of workers
+workers: 16
+# disable fast frefetcher
+no_prefetcher: True
+# path to ouptut forlder
+output: ''
+# best metric
+eval_metric: top1
+# test time augmentation factor
+tta: 0
+local_rank: 0
+# multi epochs loader to save time
+use_multi_epochs_loader: False
+
+
+#### Generator parameters ####
+# lambda for knowledge distillation
+lambda_kd: 1.0
+# lambda for cross-entropy
+lambda_ce: 1.0
+# lambda for CRD
+lambda_crd: 0.8
+# lambda for input distiller
+lambda_g: 0.1
+# lambda for critic
+lambda_critic: 0.1
+# KD-T
+T: 4
+
+#### CRD parameters ####
+s_dim: 1280
+t_dim: 5504
+feat_dim: 128
+nce_k: 4096
+nce_t: 0.07
+nce_m: 0.5
+n_data: 1281167
