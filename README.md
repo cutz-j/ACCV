@@ -1,4 +1,4 @@
-# Extra Representation Is All You Need.
+# Compensating for the Lack of Extra Training Data by Learning Extra Representation.
 
 ## Overview of our framework.
 <img src='./image/overview.jpg' width=1000>
